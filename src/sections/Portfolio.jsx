@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { X } from "lucide-react";
 
 const projects = [
   {
@@ -34,8 +36,20 @@ const projects = [
 ];
 
 const Portfolio = () => {
+  const navigate = useNavigate();
+
   return (
-    <section className="bg-[#0b1220] text-white min-h-screen pt-32 pb-16">
+    <section className="relative bg-[#0b1220] text-white min-h-screen pt-32 pb-16">
+      
+      {/* Close Button */}
+      <button
+        onClick={() => navigate("/")}
+        className="fixed top-6 right-6 z-50 bg-white/10 backdrop-blur-md 
+                   p-3 rounded-full hover:bg-white/20 transition shadow-lg"
+      >
+        <X className="w-6 h-6 text-white" />
+      </button>
+
       {/* Heading */}
       <div className="max-w-6xl mx-auto px-6 text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -53,7 +67,9 @@ const Portfolio = () => {
         {projects.map((item, index) => (
           <div
             key={index}
-            className="rounded-2xl overflow-hidden bg-[#111827] shadow-lg hover:shadow-blue-500/20 transition duration-300"
+            className="rounded-2xl overflow-hidden bg-[#111827] 
+                       shadow-lg hover:shadow-blue-500/20 
+                       transition duration-300 hover:-translate-y-1"
           >
             <img
               src={item.image}

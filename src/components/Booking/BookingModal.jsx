@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import BookingForm from "../forms/BookingForm"; // ✅ DEFAULT import
+import WhatsappForm from "../forms/WhatsappForm";
 
 const BookingModal = ({ open, onClose }) => {
   if (!open) return null;
@@ -20,7 +20,7 @@ const BookingModal = ({ open, onClose }) => {
           animate={{ scale: 1 }}
           exit={{ scale: 0.95 }}
         >
-          <BookingForm onClose={onClose} />
+          <WhatsappForm onClose={onClose} />
         </motion.div>
       </motion.div>
     </AnimatePresence>

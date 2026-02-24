@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       {/* NAVBAR */}
-      <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-40 w-[90%] max-w-7xl">
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-40 w-[80%] max-w-5xl">
         <div className="bg-white/90 backdrop-blur-md px-8 py-4 rounded-full flex items-center justify-between shadow-lg">
 
           {/* Logo */}
@@ -42,12 +42,14 @@ const Navbar = () => {
               Reviews
             </Link>
 
-            <button
-              onClick={() => setOpenBooking(true)}
-              className="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-slate-800 transition"
+            <a
+              href="https://wa.me/919130804848?text=Hello%20I%20want%20to%20book%20a%20service"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition"
             >
               Book Service
-            </button>
+            </a>
           </div>
 
           {/* Social Icons */}

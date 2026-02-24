@@ -3,10 +3,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Instagram,
-  Linkedin,
-  Twitter,
-  MessageCircle,
 } from "lucide-react";
 
 const Footer = () => {
@@ -25,45 +21,6 @@ const Footer = () => {
             Premium home & business maintenance services. Fabrication,
             painting, electrical, and repair solutions delivered with care.
           </p>
-
-          {/* Social Icons */}
-          <div className="flex gap-4">
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              className="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center text-slate-500 hover:text-pink-500 transition"
-            >
-              <Instagram size={18} />
-            </a>
-
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center text-slate-500 hover:text-blue-600 transition"
-            >
-              <Linkedin size={18} />
-            </a>
-
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              className="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center text-slate-500 hover:text-sky-500 transition"
-            >
-              <Twitter size={18} />
-            </a>
-
-            <a
-              href="https://wa.me/919130804848"
-              target="_blank"
-              rel="noreferrer"
-              className="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center text-slate-500 hover:text-green-500 transition"
-            >
-              <MessageCircle size={18} />
-            </a>
-          </div>
         </div>
 
         {/* Services */}
@@ -98,23 +55,33 @@ const Footer = () => {
               <MapPin size={16} />
               Kolhapur, Maharashtra
             </div>
-
-            <a
-              href="https://wa.me/919130804848"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-green-600 hover:underline"
-            >
-              <MessageCircle size={16} />
-              Chat on WhatsApp
-            </a>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-slate-200 py-6 text-center text-xs text-slate-400">
-        © {new Date().getFullYear()} Fixify Services. All rights reserved.
+      <div className="border-t border-slate-200 py-6">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-slate-400">
+
+          {/* Left */}
+          <span>
+            © {new Date().getFullYear()} Fixify Services. All rights reserved.
+          </span>
+
+          {/* Right */}
+          <span>
+            Powered by{" "}
+            <a
+              href="https://syntova.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline font-medium"
+            >
+              Syntova
+            </a>
+          </span>
+
+        </div>
       </div>
     </footer>
   );

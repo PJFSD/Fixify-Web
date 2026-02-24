@@ -8,6 +8,7 @@ import Testimonials from "./sections/Testimonials";
 import Footer from "./components/common/Footer";
 import Portfolio from "./sections/Portfolio";
 
+
 function Home() {
   return (
     <>
