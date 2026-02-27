@@ -3,11 +3,15 @@ import {
   Mail,
   Phone,
   MapPin,
+  Instagram,
+  Facebook,
+  MessageCircle,
 } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-slate-50 border-t border-slate-200 mt-24">
+      
       {/* Top Section */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
 
@@ -21,6 +25,36 @@ const Footer = () => {
             Premium home & business maintenance services. Fabrication,
             painting, electrical, and repair solutions delivered with care.
           </p>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-4 mt-4">
+            <a
+              href="https://www.instagram.com/fixify_atyourservice?igsh=NTVpb21ocXpxZXBt"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2 rounded-full bg-slate-100 hover:bg-pink-100 transition"
+            >
+              <Instagram size={20} className="text-slate-600 hover:text-pink-500" />
+            </a>
+
+            <a
+              href="https://www.facebook.com/share/1FnVSgXz7Q/"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2 rounded-full bg-slate-100 hover:bg-blue-100 transition"
+            >
+              <Facebook size={20} className="text-slate-600 hover:text-blue-600" />
+            </a>
+
+            <a
+              href="https://wa.me/919130804848"
+              target="_blank"
+              rel="noreferrer"
+              className="p-2 rounded-full bg-slate-100 hover:bg-green-100 transition"
+            >
+              <MessageCircle size={20} className="text-slate-600 hover:text-green-500" />
+            </a>
+          </div>
         </div>
 
         {/* Services */}
