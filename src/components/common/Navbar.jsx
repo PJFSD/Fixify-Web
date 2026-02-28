@@ -8,39 +8,39 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-40 w-[1100px]">
-      <div className="bg-white/90 backdrop-blur-md px-10 py-4 rounded-full flex items-center justify-between shadow-lg">
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-40 w-full px-4">
+      <div className="max-w-7xl mx-auto bg-white/90 backdrop-blur-md px-4 md:px-10 py-3 rounded-full flex items-center justify-between shadow-lg">
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 cursor-pointer">
           <img
             src="logo.png"
             alt="Fixify Logo"
-            className="w-16 h-16 object-contain"
+            className="w-12 h-12 md:w-16 md:h-16 object-contain"
           />
 
-          <div className="leading-tight">
-            <div className="text-xl font-black text-slate-900">
+          <div className="leading-tight hidden sm:block">
+            <div className="text-lg md:text-xl font-black text-slate-900">
               FIXIFY
             </div>
-            <div className="text-sm text-slate-500">
+            <div className="text-xs md:text-sm text-slate-500">
               At your service
             </div>
           </div>
         </Link>
 
-        {/* Always Visible Links */}
-        <div className="flex items-center gap-8">
+        {/* Links */}
+        <div className="flex items-center gap-4 md:gap-8">
           <Link
             to="/"
-            className="text-sm font-medium text-slate-600 hover:text-blue-600 transition"
+            className="text-xs md:text-sm font-medium text-slate-600 hover:text-blue-600 transition"
           >
             Services
           </Link>
 
           <Link
             to="/reviews"
-            className="text-sm font-medium text-slate-600 hover:text-blue-600 transition"
+            className="text-xs md:text-sm font-medium text-slate-600 hover:text-blue-600 transition"
           >
             Reviews
           </Link>
@@ -49,14 +49,14 @@ const Navbar = () => {
             href="https://wa.me/919130804848?text=Hello%20I%20want%20to%20book%20a%20service"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white px-3 md:px-5 py-2 text-xs md:text-sm rounded-full hover:bg-blue-700 transition"
           >
             Book Service
           </a>
         </div>
 
-        {/* Social Icons Always Visible */}
-        <div className="flex items-center gap-4 text-slate-400">
+        {/* Social Icons */}
+        <div className="hidden md:flex items-center gap-4 text-slate-400">
           <a
             href="https://www.instagram.com/fixify_atyourservice?igsh=NTVpb21ocXpxZXBt"
             target="_blank"
@@ -81,6 +81,7 @@ const Navbar = () => {
             <MessageCircle size={18} className="hover:text-green-500" />
           </a>
         </div>
+
       </div>
     </nav>
   );
